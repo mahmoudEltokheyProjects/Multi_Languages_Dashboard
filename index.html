@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard Page</title>
+        <!-- fontawesone file -->
+        <link rel="stylesheet" href="css/all.min.css" />
+        <!-- style file  -->
+        <link id="lang" rel="stylesheet" href="css/style.css" />
+
+        <meta charset="utf-8">
+    </head>
+    <body onload="myFunction()">
+        <!-- //////////////////////////////////////////////////////////// Loader ////////////////////////////////////////////////////////////-->
+        <div id="loader"></div>
+        <!-- //////////////////////////////////////////////////////// container page  /////////////////////////////////////////////////////// -->
+        <div style="display:none;" id="myDiv" class="animate-bottom">
+            <!-- //////////////////////////////////////////////////////////// navbar section //////////////////////////////////////////////////////////// -->
+            <nav class="navbar">
+                <!-- **************** left part **************** -->
+                <div class="menubar-container">
+                    <!-- ++++++ menubar icon +++++ -->
+                    <div class="menubar">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <!-- ++++++ logo img +++++ -->
+                    <div class="logo">
+                        <img src="images/logo.png" alt="logo image" />
+                    </div>
+                </div>
+                <!-- **************** center part **************** -->
+                <div class="input-box">
+                    <input name="searchName" type="text" placeholder="Type Your Search" dir="auto">
+                    <div class="search-icon">
+                        <i class="fa fa-search"></i>
+                    </div>
+                </div>
+                <!-- **************** right part **************** -->
+                <div class="mode-container">
+                    <!-- ------- light mode ------- -->
+                    <div class="mode">
+                        <i class="fa fa-moon"></i>
+                    </div>
+                    <!-- ------- notification ------- -->
+                    <div class="notification">
+                        <!-- ++++ icon ++++ -->
+                        <i class="fa fa-bell"></i>
+                        <!-- ++++ notification number ++++ -->
+                        <span class="number" data-lang="notificationNum">6</span>
+                        <!-- dropdown-menu -->
+                        <div class="dropdown">
+                            <div class="dropdown-content">
+                                <!-- +++++ notification 1 +++++ -->
+                                <li>
+                                    <div class="notification-img">
+                                        <img src="images/users/user1.jpg" alt="notification image" />
+                                    </div>
+                                    <div class="notification-text">
+                                        <p data-lang="notificationText">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </li>
+                                <!-- +++++ notification 2 +++++ -->
+                                <li>
+                                    <div class="notification-img">
+                                        <img src="images/users/user2.jpg" alt="notification image" />
+                                    </div>
+                                    <div class="notification-text">
+                                        <p data-lang="notificationText">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </li>
+                                <!-- +++++ notification 3 +++++ -->
+                                <li>
+                                    <div class="notification-img">
+                                        <img src="images/users/user3.jpg" alt="notification image" />
+                                    </div>
+                                    <div class="notification-text">
+                                        <p data-lang="notificationText">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </li>
+                                <!-- +++++ notification 4 +++++ -->
+                                <li>
+                                    <div class="notification-img">
+                                        <img src="images/users/user4.jpg" alt="notification image" />
+                                    </div>
+                                    <div class="notification-text">
+                                        <p data-lang="notificationText">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </li>
+                                <!-- +++++ notification 5 +++++ -->
+                                <li>
+                                    <div class="notification-img">
+                                        <img src="images/users/user5.jpg" alt="notification image" />
+                                    </div>
+                                    <div class="notification-text">
+                                        <p data-lang="notificationText">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </li>
+                                <!-- +++++ notification 6 +++++ -->
+                                <li>
+                                    <div class="notification-img">
+                                        <img src="images/users/user6.jpg" alt="notification image" />
+                                    </div>
+                                    <div class="notification-text">
+                                        <p data-lang="notificationText">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------- Avatar image ------- -->
+                    <div class="avatar">
+                        <img src="images/users/user1.jpg" alt="avatar image" />
+                        <!-- dropdown-menu -->
+                        <div class="dropdown">
+                            <div class="dropdown-content">
+                                <!-- +++++ notification 1 +++++ -->
+                                <li>
+                                    <div class="avatar-dropdown-icon">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    <div class="avatar-dropdown-text">
+                                        <p data-lang="avatarDropdownText1">profile</p>
+                                    </div>
+                                </li>
+                                <!-- +++++ notification 2 +++++ -->
+                                <li>
+                                    <div class="avatar-dropdown-icon">
+                                        <i class="fa fa-gear"></i>
+                                    </div>
+                                    <div class="avatar-dropdown-text">
+                                        <p data-lang="avatarDropdownText2">setting</p>
+                                    </div>
+                                </li>
+                                <!-- +++++ notification 3 +++++ -->
+                                <li>
+                                    <div class="avatar-dropdown-icon">
+                                        <i class="fa fa-credit-card-alt"></i>
+                                    </div>
+                                    <div class="avatar-dropdown-text">
+                                        <p data-lang="avatarDropdownText3">payments</p>
+                                    </div>
+                                </li>
+                                <!-- +++++ notification 4 +++++ -->
+                                <li>
+                                    <div class="avatar-dropdown-icon">
+                                        <i class="fa fa-sign-out"></i>
+                                    </div>
+                                    <div class="avatar-dropdown-text">
+                                        <p data-lang="avatarDropdownText4">logout</p>
+                                    </div>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------- Languages Box  ------- -->
+                    <!-- <div class="languagesBox">
+                        <select>
+                            <option value="en" data-lang="englishLang">English</option>
+                            <option value="ar" data-lang="arabicLang">Arabic</option>
+                        </select>
+                    </div> -->
+                    <div class="languagesBox lang-menu">
+                        <div class="selected-lang">
+                            English
+                        </div>
+                        <select class="dropdown">
+                            <option value="en" data-lang="englishLang">English</option>
+                            <option value="ar" data-lang="arabicLang">Arabic</option>
+                        </select>
+                    </div>
+                </div>
+            </nav>
+            <!-- //////////////////////////////////////////////////////////// content section //////////////////////////////////////////////////////////// -->
+            <div class="content">
+                <!-- +++++++++++++++++++ sidebar section +++++++++++++++++++ -->
+                <div class="sidebar">
+                    <!-- --------- sidebar item --------- -->
+                    <div class="sidebar-nav">
+                        <div class="icon">
+                            <i class="fa-solid fa-gauge-high"></i>
+                        </div>
+                        <span data-lang="sidebarDashboard">dashboard</span>
+                    </div>
+                    <!-- --------- sidebar item --------- -->
+                    <div class="sidebar-nav active">
+                        <div class="icon">
+                            <i class="fa fa-chart-line"></i>
+                        </div>
+                        <span data-lang="sidebarAnalytic">analytic</span>
+                    </div>
+                    <!-- --------- sidebar item --------- -->
+                    <div class="sidebar-nav">
+                        <div class="icon">
+                            <i class="fa fa-cog"></i>
+                        </div>
+                        <span data-lang="sidebarOrganization">organization</span>
+                    </div>
+                    <!-- --------- sidebar item --------- -->
+                    <div class="sidebar-nav">
+                        <div class="icon">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <span data-lang="sidebarEmployees">employees</span>
+                    </div>
+                    <!-- --------- sidebar item --------- -->
+                    <div class="sidebar-nav">
+                        <div class="icon">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                        <span data-lang="sidebarCalendar">calendar</span>
+                    </div>
+                    <!-- --------- sidebar item --------- -->
+                    <div class="sidebar-nav">
+                        <div class="icon">
+                            <i class="fa fa-bar-chart"></i>
+                        </div>
+                        <span data-lang="sidebarReports">reports</span>
+                    </div>
+                    <!-- --------- sidebar item --------- -->
+                    <div class="sidebar-nav">
+                        <div class="icon">
+                            <i class="fa fa-folder-open"></i>
+                        </div>
+                        <span data-lang="sidebarFiles">files</span>
+                    </div>
+                    <!-- --------- sidebar item --------- -->
+                    <div class="sidebar-nav">
+                        <div class="icon">
+                            <i class="fa fa-address-card"></i>
+                        </div>
+                        <span data-lang="sidebarDirectory">directory</span>
+                    </div>
+                    <!-- --------- sidebar item --------- -->
+                    <div class="sidebar-nav">
+                        <div class="icon">
+                            <i class="fa fa-lightbulb"></i>
+                        </div>
+                        <span data-lang="sidebarElements">elements</span>
+                    </div>
+                    <!-- --------- sidebar item --------- -->
+                    <div class="sidebar-nav">
+                        <div class="icon">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                        <span data-lang="sidebarMore">more</span>
+                    </div>
+                </div>
+                <!-- +++++++++++++++++++ wrapper section +++++++++++++++++++ -->
+                <div class="wrapper">
+                    <!-- ////////////// row 1 : statistics ////////////// -->
+                    <div class="wrapper-row">
+                        <!-- ++++++ box 1 +++++++ -->
+                        <div class="box">
+                            <!-- box : image -->
+                            <img src="images/fanos.svg" alt=" fanos image" />
+                            <!-- box : icon -->
+                            <span class="fa fa-tasks"></span>
+                            <!-- box : rate -->
+                            <span>100+</span>
+                            <!-- box : text -->
+                            <span data-lang="wrapperTaskDesc">To Do</span>
+                        </div>
+                        <!-- ++++++ box 2 +++++++ -->
+                        <div class="box">
+                            <!-- box : image -->
+                            <img src="images/zena.svg" alt=" fanos image" />
+                            <!-- box : icon -->
+                            <span class="fa fa-spinner"></span>
+                            <!-- box : rate -->
+                            <span>100+</span>
+                            <!-- box : text -->
+                            <span data-lang="wrapperProgressDesc">In Progress</span>
+                        </div>
+                        <!-- ++++++ box 3 +++++++ -->
+                        <div class="box">
+                            <img src="images/zena.svg" alt=" fanos image" />
+                            <!-- box : icon -->
+                            <span class="fa fa-check-circle"></span>
+                            <!-- box : rate -->
+                            <span>100+</span>
+                            <!-- box : text -->
+                            <span data-lang="wrapperCompletedDesc">Completed</span>
+                        </div>  
+                        <!-- ++++++ box 4 +++++++ -->
+                        <div class="box">
+                            <img src="images/fanos.svg" alt=" fanos image" />
+                            <!-- box : icon -->
+                            <span class="fa fa-bug"></span>
+                            <!-- box : rate -->
+                            <span>100+</span>
+                            <!-- box : text -->
+                            <span data-lang="wrapperIssueDesc">Issues</span>
+                        </div>  
+                    </div>
+                    <!-- ////////////// row 2 : table ////////////// -->
+                    <div class="wrapper-row">
+                        <div class="table">
+                            <!-- ++++++++++++++ table body ++++++++++++++ -->
+                            <div class="table-body">
+                                <!-- ********* table : row 1 ********* -->
+                                <div class="table-row">
+                                    <!-- table data : head row -->
+                                    <div data-lang="tableHeadId">id</div>
+                                    <div class="avatar" data-lang="tableHeadAvatar">Avatar</div>
+                                    <div class="name" data-lang="wrapperHeadName">Name</div>
+                                    <div class="status" data-lang="wrapperHeadStatus">Status</div>
+                                    <div class="progress" data-lang="wrapperHeadProgress">Target Achievement</div>
+                                    <div class="actions" data-lang="wrapperHeadAction">Actions</div>
+                                </div>
+                                <!-- ********* table : row 2 ********* -->
+                                <div class="table-row">
+                                    <!-- table data -->
+                                    <div data-lang="wrapperRowId1">#01</div>
+                                    <div class="avatar">
+                                        <img src="images/users/user6.jpg" alt="table avatar" />
+                                    </div>
+                                    <div class="name" data-lang="wrapperRowName1">Ahmed Mohamed</div>
+                                    <div class="status">
+                                        <span class="accept" data-lang="wrapperStatus1">Accepted</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <div class="actions">
+                                        <button class="hireBtn" data-lang="wrapperActionBtn1">hire</button>
+                                        <button class="fireBtn" data-lang="wrapperActionBtn2">fire</button>
+                                    </div>
+                                </div>
+                                <!-- ********* table : row 3 ********* -->
+                                <div class="table-row">
+                                    <!-- table data -->
+                                    <div data-lang="wrapperRowId2">#02</div>
+                                    <div class="avatar">
+                                        <img src="images/users/user2.jpg" alt="table avatar" />
+                                    </div>
+                                    <div class="name" data-lang="wrapperRowName2">Sayed Moaud</div>
+                                    <div class="status">
+                                        <span class="cancel" data-lang="wrapperStatus2">Cancelled</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <div class="actions">
+                                        <button class="hireBtn" data-lang="wrapperActionBtn1">hire</button>
+                                        <button class="fireBtn" data-lang="wrapperActionBtn2">fire</button>
+                                    </div>
+                                </div>
+                                <!-- ********* table : row 4 ********* -->
+                                <div class="table-row">
+                                    <!-- table data -->
+                                    <div data-lang="wrapperRowId3">#03</div>
+                                    <div class="avatar">
+                                        <img src="images/users/user3.jpg" alt="table avatar" />
+                                    </div>
+                                    <div class="name" data-lang="wrapperRowName3">Ahmed Mohamed</div>
+                                    <div class="status">
+                                        <span class="accept" data-lang="wrapperStatus1">Accepted</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <div class="actions">
+                                        <button class="hireBtn" data-lang="wrapperActionBtn1">hire</button>
+                                        <button class="fireBtn" data-lang="wrapperActionBtn2">fire</button>
+                                    </div>
+                                </div>
+                                <!-- ********* table : row 5 ********* -->
+                                <div class="table-row">
+                                    <!-- table data -->
+                                    <div data-lang="wrapperRowId4">#04</div>
+                                    <div class="avatar">
+                                        <img src="images/users/user4.jpg" alt="table avatar" />
+                                    </div>
+                                    <div class="name"  data-lang="wrapperRowName4">Mohamed Ahmed</div>
+                                    <div class="status">
+                                        <span class="cancel" data-lang="wrapperStatus2">Canceled</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <div class="actions">
+                                        <button class="hireBtn" data-lang="wrapperActionBtn1">hire</button>
+                                        <button class="fireBtn" data-lang="wrapperActionBtn2">fire</button>
+                                    </div>
+                                </div>
+                                <!-- ********* table : row 6 ********* -->
+                                <div class="table-row">
+                                    <!-- table data -->
+                                    <div data-lang="wrapperRowId5">#05</div>
+                                    <div class="avatar">
+                                        <img src="images/users/user5.jpg" alt="table avatar" />
+                                    </div>
+                                    <div class="name" data-lang="wrapperRowName5">Kariem Mohamed</div>
+                                    <div class="status">
+                                        <span class="accept" data-lang="wrapperStatus1">Accepted</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <div class="actions">
+                                        <button class="hireBtn" data-lang="wrapperActionBtn1">hire</button>
+                                        <button class="fireBtn" data-lang="wrapperActionBtn2">fire</button>
+                                    </div>
+                                </div>
+                                <!-- ********* table : row 7 ********* -->
+                                <div class="table-row">
+                                    <!-- table data -->
+                                    <div data-lang="wrapperRowId6">#06</div>
+                                    <div class="avatar">
+                                        <img src="images/users/user1.jpg" alt="table avatar" />
+                                    </div>
+                                    <div class="name"  data-lang="wrapperRowName6">Sayed Ismail</div>
+                                    <div class="status">
+                                        <span class="cancel" data-lang="wrapperStatus2">Cancelled</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <div class="actions">
+                                        <button class="hireBtn" data-lang="wrapperActionBtn1">hire</button>
+                                        <button class="fireBtn" data-lang="wrapperActionBtn2">fire</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ////////////// row 3 : chart ////////////// -->
+                    <div class="wrapper-row chart-row">
+                        <div class="chartClass" id="chart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- apexcharts library -->
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <!-- script file -->
+        <script src="js/script.js"></script>
+        <!-- translation Languages File -->
+        <script src="js/translationsFile.js"></script>
+    </body>
+</html>
